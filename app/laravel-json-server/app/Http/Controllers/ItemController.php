@@ -18,12 +18,28 @@ class ItemController extends Controller
         return view('items.index', compact('items'));
     }
 
+    public function create()
+    {
+        // 新規作成用のフォームを表示
+        return view('items.create');
+    }
+
     public function store(Request $request)
     {
         // 新しいデータをjson-serverに送信
         Http::post("{$this->apiBaseUrl}/items", $request->all());
 
         return redirect()->route('items.index')->with('success', 'Item created successfully!');
+    }
+
+    public function edit($id)
+    {
+        // json-serverから特定のアイテムを取得
+        $response = Http::get("{$this->apiBaseUrl}/items/{$id}");
+        $item = $response->json();
+
+        // 編集用フォームを表示
+        return view('items.edit', compact('item'));
     }
 
     public function update(Request $request, $id)
