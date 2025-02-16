@@ -1,6 +1,11 @@
 <?php
 
 use App\Http\Controllers\ItemController;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return redirect('/items');
+});
 
 Route::get('/items', [ItemController::class, 'index'])->name('items.index');
 Route::get('/items/create', [ItemController::class, 'create'])->name('items.create');
