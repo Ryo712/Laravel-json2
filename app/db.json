@@ -1,7 +1,28 @@
 {
-    "items": [
-        { "id": 1, "name": "Item1", "description": "description 1" },
-        { "id": 2, "name": "Item2", "description": "description 2" }
-    ]
-  }
-  
+  "items": [
+    {
+      "id": "1",
+      "name": "Item1",
+      "description": "description 1"
+    },
+    {
+      "id": "2",
+      "name": "Item2",
+      "description": "description 2"
+    },
+    {
+      "_token": "LCosLqFvFEgkXbOQdZViW15NgbXJnDEkOLrMlnz5",
+      "_method": "PUT",
+      "name": "RYO OSHIRO",
+      "description": "ppppppkkk",
+      "id": "c335"
+    },
+    {
+      "_token": "LCosLqFvFEgkXbOQdZViW15NgbXJnDEkOLrMlnz5",
+      "_method": "PUT",
+      "name": "Takuya Kimura",
+      "description": "Nice guy",
+      "id": "a24c"
+    }
+  ]
+}
